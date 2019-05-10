@@ -82,6 +82,7 @@ if __name__ == '__main__':
   data_files = get_datafiles(),
   options = {
    'py2exe': {
+    'packages': ['packaging', 'appdirs'],
     'compressed': False,
     'dll_excludes': ['w9xpopen.exe', 'MSVCP90.dll', 'mswsock.dll', 'powrprof.dll', 'MPR.dll', 'MSVCR100.dll', 'mfc90.dll', 'MSVFW32.dll', 'AVIFIL32.dll', 'AVICAP32.dll', 'ADVAPI32.dll', 'CRYPT32.dll', 'WLDAP32.dll'],
     'optimize': 1,
