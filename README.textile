@@ -10,11 +10,11 @@ h2. Running TheQube from source
 
 This document describes how to run TheQube from source and how to build a binary version.
 
-h3. Dependencies.
+h3. Dependencies
 
-To be able to build TheQube you need to install a few programs first. Most of them are included in the dependencies directory in the root of this repo. The only exception is Python. Download and install "Python 2.7 32-bit":https://www.python.org/downloads/. Be sure to add Python directory to your path during install.
+To be able to build TheQube you need to install a few programs first. Most of them are included in the dependencies directory in the root of this repo. The only exception is Python. Download and install "Python 2.7 32-bit":https://www.python.org/downloads/. Be sure to add Python directory to your path during installation.
 
-h4. Dependencies included in the dependencies directory.
+h4. Dependencies included in the dependencies directory
 
 * "Durus":https://www.mems-exchange.org/software/ (version 3.9)
 * "Python Imaging Librarry":http://www.pythonware.com/products/pil/ (version 1.1.7)
@@ -25,7 +25,7 @@ h4. Dependencies included in the dependencies directory.
 
 h4. Dependencies installed with pip
 
-The rest of the needed packages could be installed with Python package manager called pip. Before using it is a good idea to update to the latest version with the following two commands:
+The rest of the needed packages could be installed with Python package manager called pip. Before using it is a good idea to update pip to the latest version with the following two commands:
 
 bc. python -m pip install --upgrade pip
 python -m pip install --upgrade setuptools
@@ -36,15 +36,15 @@ bc. python -m pip install -r requirements.txt
 
 h3. Running TheQube
 
-When all above packages are installed you can finally start TheQube. Move to the src directory of this repo and execute
+When all above packages are installed you can finally start TheQube. Move to the src directory of this repo and execute:
 
 bc. python main.pyw
-alternatively you can start TheQube by simply pressing enter on the main.pyw file as long as Pythonw is associated with .pyw files.
+
+Alternatively you can start TheQube by simply pressing enter on the main.pyw file as long as Pythonw is associated with .pyw files.
 
 h3. Building a binary version
 
-A binary version doesn't need Python and other dependencies to run. To build it you need to install py2exe included in the dependencies
-directory and two more packages with pip by executing the following commands:
+A binary version doesn't need Python and other dependencies to run. To build it you need to install py2exe included in the dependencies directory and two more packages with pip by executing the following commands:
 
 bc. python -m pip install packaging
 python -m pip install appdirs
