@@ -1,7 +1,56 @@
-h2. Welcome to TheQube
+h1. Welcome to TheQube
 
 TheQube is an accessible social networking client developed mainly for the blind and visually impaired users.
 © Original idea and code by "Christopher Toth":http://q-continuum.net/
 © Main fork implementation and various new features and bugfixes by "Quartizer projects":http://quartzprojects.co.uk/
 © Currently developed and maintained by "TheQube developers team":http://theqube.oire.org/.
 Distributed under an "MIT license":http://choosealicense.com/licenses/mit/.
+
+h2. Running TheQube from source
+
+This document describes how to run TheQube from source and how to build a binary version.
+
+h3. Dependencies
+
+To be able to build TheQube you need to install a few programs first. Most of them are included in the dependencies directory in the root of this repo. The only exception is Python. Download and install "Python 2.7 32-bit":https://www.python.org/downloads/. Be sure to add Python directory to your path during installation.
+
+h4. Dependencies included in the dependencies directory
+
+* "Durus":https://www.mems-exchange.org/software/ (version 3.9)
+* "Python Imaging Librarry":http://www.pythonware.com/products/pil/ (version 1.1.7)
+* "py2exe":http://www.py2exe.org/ (version 0.6.9) (required only if you want to build executable version of TheQube)
+* "PycURL":http://pycurl.io/ (version 7.19.0)
+* "pywin32":https://github.com/mhammond/pywin32 (version 214)
+* "wxPython":https://wxpython.org/ (version 2.9.1.1)
+
+h4. Dependencies installed with pip
+
+The rest of the needed packages could be installed with Python package manager called pip. Before using it is a good idea to update pip to the latest version with the following two commands:
+
+bc. python -m pip install --upgrade pip
+python -m pip install --upgrade setuptools
+
+To make installation easier all required packages are listed in the text file called requirements.txt. To install them move to the root directory of this repo, make sure that Python and git are in your path and execute the following command:
+
+bc. python -m pip install -r requirements.txt
+
+h3. Running TheQube
+
+When all above packages are installed you can finally start TheQube. Move to the src directory of this repo and execute:
+
+bc. python main.pyw
+
+Alternatively you can start TheQube by simply pressing enter on the main.pyw file as long as Pythonw is associated with .pyw files.
+
+h3. Building a binary version
+
+A binary version doesn't need Python and other dependencies to run. To build it you need to install py2exe included in the dependencies directory and two more packages with pip by executing the following commands:
+
+bc. python -m pip install packaging
+python -m pip install appdirs
+
+after that from the src directory execute:
+
+bc. python setup.py py2exe
+
+You will find the binaries in the dist directory.
